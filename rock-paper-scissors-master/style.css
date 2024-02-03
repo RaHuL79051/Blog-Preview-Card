@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+    text-transform: uppercase;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container .Score{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 25px;
+    margin: 30px auto;   
+    border-radius: 20px;
+    gap: 450px;
+}
+
+.container .Score .RPS img{
+    height: 100%;
+    width: 100%;
+}
+
+.container .Score .scores{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    background-color: white;
+    text-align: center;
+    margin: auto 0;
+
+}
+
+.container .Score .scores p{
+    color: hsl(229, 64%, 46%);
+}
+
+.container .Score .scores #YourScore{
+    color: gray;
+    font-size: 2rem;
+}
+
+#Rules{
+    border: 1px solid white;
+    color:  white;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 5px;
+    bottom: 50px;
+    right: 50px;
+}
+
+#Rules:hover{
+    cursor: pointer;
+}
+
+.Rulebook{
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+.Rulebook h1{
+    font-size: 1.4rem;
+    margin: 20px 0px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: hsl(217, 16%, 45%);
+}
+
+.Rulebook .close{
+    position: absolute;
+    top: -13px;
+    right: 20px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.Rulebook img{
+    margin-top: 50px;
+}
+
+.Options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 500px;
+    margin: 20px auto;
+    /* display: none; */
+}
+
+.Options .background{
+    position: absolute;
+    z-index: 1;
+}
+
+.Options div{
+    height: fit-content;
+    width: fit-content;
+    padding: 30px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+    transition: scale 0.4s;
+}
+
+
+.Options div:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.Options .Stone{
+    border: 20px solid hsl(349, 71%, 52%) ;
+}
+
+.Options .Scissors{
+    border:20px solid hsl(40, 84%, 53%);
+}
+
+.Options .Paper{
+    border: 20px solid hsl(230, 89%, 62%);
+}
+
+.GameContainer{
+    width: 1000px;
+    height: 300px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 150px;
+    display: none;
+    position: relative;
+}
+.GameContainer .text{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    width: 88%;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.GameContainer .UserSide,.GameContainer .ComputerSide{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(207, 204, 204);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.GameContainer img{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    display: none;
+    padding: 20px;
+}
+
+.GameContainer .PlayAgain{
+    text-align: center;
+    width: fit-content;
+    color: white;
+    font-size: 2rem;
+}
+
+.GameContainer .PlayAgain button{
+    margin: 25px 0px 0px 0px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    width: 100%;
+    font-size: 1rem;
+    transition: scale 0.4s ease;
+    animation: jumping 1s infinite;
+}
+
+.GameContainer .PlayAgain button:hover{
+    cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% -50%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@keyframes jumping {
+    0%{
+        scale: 1;
+    } 50%{
+        scale: 1.2;
+    } 100%{
+        scale: 1;
+    }
+}
+
+
+@media (max-width:400px) {
+    .container{
+        height: 93.4vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .container .Score{
+        gap: 50px;
+    }
+    .container .Score .RPS{
+        height: 100px;
+        width: 120px;
+    }
+    #Rules{
+        left: 200px;
+        bottom: 0%;
+        translate: -50% -50%;
+        font-size: 1rem;
+    }
+    .Rulebook{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+    }
+    .Options{   
+        height: 450px;
+        width: 100%;
+        gap: 55px;
+    }
+    .Options div{
+        padding: 20px;
+    }
+    .Options .Stone{
+        border: 15px solid hsl(349, 71%, 52%);
+    }
+    .Options .Scissors{
+        border: 15px solid hsl(40, 84%, 53%);
+    }
+    .Options .Paper{
+        border: 15px solid hsl(230, 89%, 62%);
+    }
+
+    .GameContainer{
+        width: 100%;
+        height: 95vh;
+        gap: 25px;
+    }
+    .GameContainer .text{
+        top: 25%;
+        font-size: 1rem;
+    }
+    .GameContainer .UserSide, .GameContainer .ComputerSide{
+        height: 160px;
+        width: 160px;
+    }
+    .GameContainer .UserSide img{
+        width: 100%;
+        height: 100%;
+    }
+    .GameContainer .ComputerSide img{
+        width: 100%;
+        height: 100%;
+    }
+    .GameContainer .PlayAgain{
+        font-size: 0.7rem;
+        padding: 10px;
+        width: fit-content;
+        position: absolute;
+        bottom: 50px;
+        width: 250px;
+    }
+    .GameContainer .PlayAgain button{
+        font-size: 0.6rem;
+        padding: 10px;
+        width: 100%;
+    }
+    .attribution{
+        display: none;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Score Bar -->
+      <div class="Score">
+        <div class="RPS">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="scores">
+          <p>Score</p>
+          <p id="YourScore">12</p>
+        </div>
+      </div>
+      <!-- Options -->
+      <div class="Options">
+        <img src="./images/bg-triangle.svg" alt="" class="background">
+        <div class="Paper" onclick="MyOption(1)">
+          <img src="./images/icon-paper.svg" alt="">
+        </div>
+        <div class="Scissors" onclick="MyOption(2)">
+          <img src="./images/icon-scissors.svg" alt="">
+        </div>
+        <div class="Stone" onclick="MyOption(3)">
+          <img src="./images/icon-rock.svg" alt="">
+        </div>
+      </div>
+
+      <!-- Acutal Game Play -->
+      <div class="GameContainer">
+        <div class="text">
+          <div class="User">You Pick</div>
+          <div class="Mouse">Mouse Pick</div>
+        </div>
+        <div class="UserSide">
+          <img src="./images/icon-paper.svg" alt="" id="one">
+          <img src="./images/icon-scissors.svg" alt="" id="two">
+          <img src="./images/icon-rock.svg" alt="" id="three">
+        </div>
+        <div class="PlayAgain">
+          <h1 style="display: none;" id="Win">You Win</h1>
+          <h1 style="display: none;" id="Loose">You Loose</h1>
+          <h1 style="display: none;" id="Tie">It's a Tie</h1>
+          <button onclick="ResetGame()" id="PlayAgain">Play Again</button>
+        </div>
+        <div class="ComputerSide">
+          <img src="./images/icon-paper.svg" alt="" id="Cone">
+          <img src="./images/icon-scissors.svg" alt="" id="Ctwo">
+          <img src="./images/icon-rock.svg" alt="" id="Cthree">
+        </div>
+      </div>
+      <!-- Rules -->
+      <button id="Rules">
+        Rules
+      </button>
+      <div class="Rulebook">
+        <h1>rules</h1>
+        <img src="./images/icon-close.svg" alt="" class="close">
+        <img src="./images/image-rules.svg" alt="">
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Rahul Saxena</a>.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
