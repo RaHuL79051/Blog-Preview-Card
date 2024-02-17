@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive comments section</title>
+  </head>
+  <body>
+    <div class="ChatContainer">
+      <div class="FirstPart">
+        <div class="Part">
+          <div class="Likes">
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="Plus"
+              onclick="IncreaseCount(document.querySelector('h4').innerHTML)"
+            />
+            <h4>12</h4>
+            <img src="./images/icon-minus.svg" alt="" class="Minus" />
+          </div>
+          <div class="Comments">
+            <div class="id">
+              <img
+                src="./images/avatars/image-amyrobson.webp"
+                alt="anyrobson"
+              />
+              <h4>amyrobson</h4>
+              <p>1 month ago</p>
+              <div class="reply">
+                <img src="./images/icon-reply.svg" alt="" /> Reply
+              </div>
+            </div>
+            <div class="message" id="Comment-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              architecto quia totam quos perspiciatis? Distinctio, doloremque
+              iure provident vero, facilis libero obcaecati neque labore impedit
+              voluptate corporis saepe. Culpa, sit?
+            </div>
+          </div>
+        </div>
+        <div class="Part">
+          <div class="Likes">
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="Plus"
+              onclick="IncreaseCount()"
+            />
+            <h4>5</h4>
+            <img src="./images/icon-minus.svg" alt="" class="Minus" />
+          </div>
+          <div class="Comments">
+            <div class="id">
+              <img
+                src="./images/avatars/image-maxblagun.webp"
+                alt="anyrobson"
+              />
+              <h4>maxblagun</h4>
+              <p>2 weeks ago</p>
+              <div class="reply">
+                <img src="./images/icon-reply.svg" alt="" /> Reply
+              </div>
+            </div>
+            <div class="message" id="Comment-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              architecto quia totam quos perspiciatis? Distinctio, doloremque
+              iure provident vero, facilis libero obcaecati neque labore impedit
+              voluptate corporis saepe. Culpa, sit?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SecondPart">
+        <hr />
+        <div class="Part Second">
+          <div class="Likes">
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="Plus"
+              onclick="IncreaseCount()"
+            />
+            <h4>4</h4>
+            <img src="./images/icon-minus.svg" alt="" class="Minus" />
+          </div>
+          <div class="Comments">
+            <div class="id">
+              <img
+                src="./images/avatars/image-ramsesmiron.webp"
+                alt="anyrobson"
+              />
+              <h4>ramsesmiron</h4>
+              <p>1 week ago</p>
+              <div class="reply">
+                <img src="./images/icon-reply.svg" alt="" /> Reply
+              </div>
+            </div>
+            <div class="message" id="Comment-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              architecto quia totam quos perspiciatis? Distinctio, doloremque
+              iure provident vero, facilis libero obcaecati neque labore impedit
+              voluptate corporis saepe. Culpa, sit?
+            </div>
+          </div>
+        </div>
+        <div class="Part Second">
+          <div class="Likes">
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="Plus"
+              onclick="IncreaseCount()"
+            />
+            <h4>2</h4>
+            <img src="./images/icon-minus.svg" alt="" class="Minus" />
+          </div>
+          <div class="Comments">
+            <div class="id">
+              <img
+                src="./images/avatars/image-juliusomo.webp"
+                alt="anyrobson"
+              />
+              <h4>juiliusomo</h4>
+              <span class="badge">you</span>
+              <p>2 days ago</p>
+              <div class="delete">
+                <img src="./images/icon-delete.svg" alt="" /> Delete
+              </div>
+              <div class="reply">
+                <img src="./images/icon-edit.svg" alt="" /> Edit
+              </div>
+            </div>
+            <div class="message" id="Comment-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              architecto quia totam quos perspiciatis? Distinctio, doloremque
+              iure provident vero, facilis libero obcaecati neque labore impedit
+              voluptate corporis saepe. Culpa, sit?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="InputBox">
+        <img src="./images/avatars/image-juliusomo.webp" alt="" />
+        <input type="text" placeholder="Add a comment.." />
+        <button onclick="PuchData()">Send</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Rahul Saxena</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: gainsboro;
+}
+
+.ChatContainer {
+  height: 90vh;
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ChatContainer .FirstPart {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.ChatContainer .SecondPart {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.ChatContainer .SecondPart hr {
+  width: 2px;
+  height: 100%;
+  background-color: #b0b0b0;
+  position: absolute;
+  left: 50px;
+}
+
+/* Comments */
+
+.Part {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 1px #b0b0b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.Part .Likes {
+  height: 77%;
+  width: 35px;
+  background-color: gainsboro;
+  color: hsl(238, 40%, 52%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.Part .Likes img {
+  margin: 5px 0;
+}
+
+.Part .Likes img:hover {
+  cursor: pointer;
+}
+
+.Part .Likes h4 {
+  margin: 10px 10px;
+}
+
+.Part .Comments {
+  width: calc(100% - 80px);
+  height: 100%;
+  margin-bottom: 5px;
+}
+
+.Part .Comments .id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 5px;
+}
+
+.Part .Comments .id h4 {
+  font-weight: 700;
+}
+
+.Part .Comments .id p {
+  color: hsl(240, 0%, 58%);
+}
+
+.Part .Comments .id img {
+  height: 30px;
+  width: 30px;
+}
+
+.Part .Comments .id .reply,
+.delete {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Part .Comments .id .delete {
+  right: 80px;
+}
+
+.Part .Comments .id .delete img {
+  height: 14px;
+  width: 14px;
+}
+.Part .Comments .id .reply img {
+  height: 14px;
+  width: 14px;
+}
+
+.Part .Comments .id .reply:hover {
+  cursor: pointer;
+}
+.Part .Comments .id .delete:hover {
+  cursor: pointer;
+}
+
+.Part .Comments .id span {
+  background-color: hsl(238, 40%, 52%);
+  padding: 3px;
+  border-radius: 4px;
+  color: white;
+  width: 40px;
+  text-align: center;
+}
+
+.Second {
+  width: 90%;
+}
+
+.InputBox {
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 1px #b0b0b0;
+}
+
+.InputBox img {
+  height: 40px;
+  width: 40px;
+  margin: 25px 20px;
+  margin-right: 0;
+}
+
+.InputBox input {
+  width: 75%;
+  height: 70%;
+  margin-top: 15px;
+  border-radius: 4px;
+  border: 1px solid gainsboro;
+  font-size: 1rem;
+  padding: 10px;
+  outline: none;
+}
+
+.InputBox button {
+  font-size: 1rem;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
