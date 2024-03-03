@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="InputSection">
+        <div class="Day">
+          <span class="Date" id="DaySpan">Day</span>
+          <input
+            type="number"
+            name=""
+            id="Day"
+            placeholder="DD"
+            required
+            oninput="DayInput()"
+          />
+          <span id="ErrorDay">Must be a valid day</span>
+          <span class="ErrorEmpty">This Field is required</span>
+        </div>
+        <div class="Month">
+          <span class="Date" id="MonthSpan">Month</span>
+          <input
+            type="text"
+            name=""
+            id="Month"
+            placeholder="MM"
+            required
+            oninput="MonthInput()"
+          />
+          <span id="ErrorMonth">Must be a valid Month</span>
+          <span class="ErrorEmpty">This Field is required</span>
+        </div>
+        <div class="Year">
+          <span class="Date" id="YearSpan">Year</span>
+          <input
+            type="text"
+            name=""
+            id="Year"
+            placeholder="YYYY"
+            required
+            oninput="YearInput()"
+          />
+          <span id="ErrorYear">Must be a valid Year</span>
+          <span class="ErrorEmpty">This Field is required</span>
+        </div>
+      </div>
+      <div class="Middle">
+        <hr />
+        <img
+          src="./assets/images/icon-arrow.svg"
+          alt=""
+          onclick="CheckDate()"
+        />
+      </div>
+      <div class="OutputSection">
+        <div class="OutputYear DisplayElement">
+          <span id="YearCount">--</span>
+          <h1>years</h1>
+        </div>
+        <div class="OutputMonth DisplayElement">
+          <span id="MonthCount">--</span>
+          <h1>months</h1>
+        </div>
+        <div class="OutputDay DisplayElement">
+          <span id="DayCount">--</span>
+          <h1>days</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Rahul Saxena</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
